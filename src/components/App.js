@@ -13,7 +13,7 @@ const App = (props) => {
     // フォームの値が変更されると実行。
     setTask(e.target.value)
     // フォームに入力した値を取り出して変数としてsetTask関数に渡す。
-    // setTask関数はtaskの値をフォームに入力された値に上書きする。
+    // setTask関数はtaskValueの値をフォームに入力された値に上書きする。
   }
 
   const addTask = () => {
@@ -34,7 +34,7 @@ const App = (props) => {
     <>
       <h1>todoリスト</h1>
       <input value={ taskValue } onChange={ createTask } />
-      {/* フォームに入力された値をcreateTask関数からtaskというステートで受け取る。 */}
+      {/* フォームに入力された値をcreateTask関数からtaskValueというステートで受け取る。 */}
       <button onClick={ addTask }>追加</button>
       <ul>
         {props.todos.map((todo, index) => (
